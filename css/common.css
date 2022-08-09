@@ -40,16 +40,32 @@
     padding: 0 0.05rem;
     margin: 0 0.25rem;
     position: relative;
+    color: #333;
+    transition: all .5s;
+}
+
+.hi_first_menu>li>a:hover {
+    color: #13558a;
+}
+
+.hi_first_menu>li>a:hover::after {
+    width: 100%;
 }
 
 .hi_first_menu>li>a::after {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
     height: 3px;
-    background-color: blue;
+    background-color: #13558a;
+    transition: .5s;
+}
+
+.hi_first_menu>li.active>a::after {
+    width: 100%;
 }
 
 .hi_second_menu {
@@ -61,5 +77,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: pink; display: none;
+    background-color: pink;
+    display: none;
 }
