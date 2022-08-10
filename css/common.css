@@ -4,10 +4,24 @@
     margin: auto;
 }
 
-/* 头部 */
+/* 头部 pc样式*/
+.hi_head {}
+
+.hi_fixed .hi_navbar, .hi_scroll .hi_navbar {
+    background-color: rgb(255, 255, 255, 1);
+}
+
+.hi_fixed .hi_nav_menu_a {
+    color: #333;
+}
+
+.hi_fixed .hi_logolist .hi_logo2 {
+    opacity: 1;
+}
+
 .hi_navbar {
     position: fixed;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255, 0);
     height: 70px;
     width: 100%;
 }
@@ -20,8 +34,16 @@
     width: 132px;
 }
 
-.hi_logolist .hi_logo1 {
-    display: none;
+.hi_logolist {
+    position: relative;
+}
+
+.hi_logolist .hi_logo2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .5s;
 }
 
 .hi_nav_menu {
@@ -61,9 +83,9 @@
     transition: .5s;
 }
 
-.hi_nav_menu_li.active .hi_nav_menu_li::after {
+/* .hi_nav_menu_li.active .hi_nav_menu_li::after {
     width: 100%;
-}
+} */
 
 .hi_nav_menu_a {
     display: block;
@@ -71,7 +93,8 @@
     font-size: 0.18rem;
     padding: 0 0.05rem;
     position: relative;
-    color: #333;
+    /* color: #333; */
+    color: #fff;
 }
 
 .hi_pull_down {
