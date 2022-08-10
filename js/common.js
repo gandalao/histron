@@ -1,10 +1,10 @@
 $(function () {
     $(".hi_first_menu>li").hover(
         function () {
-            $(".hi_second_menu").slideDown()
+            $(this).find(".hi_pull_down").stop().slideDown()
         },
         function () {
-
+            $(this).find(".hi_pull_down").stop().slideUp()
         }
     )
 })

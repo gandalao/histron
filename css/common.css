@@ -33,26 +33,23 @@
     display: flex;
 }
 
-.hi_first_menu>li>a {
-    display: block;
-    line-height: 70px;
-    font-size: 0.18rem;
-    padding: 0 0.05rem;
-    margin: 0 0.25rem;
+.hi_nav_menu_li {
     position: relative;
-    color: #333;
     transition: all .5s;
+    margin: 0 0.25rem;
 }
 
-.hi_first_menu>li>a:hover {
+
+
+.hi_nav_menu_li:hover {
     color: #13558a;
 }
 
-.hi_first_menu>li>a:hover::after {
+.hi_nav_menu_li:hover::after {
     width: 100%;
 }
 
-.hi_first_menu>li>a::after {
+.hi_nav_menu_li::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -64,19 +61,40 @@
     transition: .5s;
 }
 
-.hi_first_menu>li.active>a::after {
+.hi_nav_menu_li.active .hi_nav_menu_li::after {
     width: 100%;
 }
 
-.hi_second_menu {
+.hi_nav_menu_a {
+    display: block;
+    line-height: 70px;
+    font-size: 0.18rem;
+    padding: 0 0.05rem;
+    position: relative;
+    color: #333;
+}
+
+.hi_pull_down {
     position: fixed;
     left: 0;
     top: 70px;
     width: 100%;
     height: 60px;
+    background-color: #fff;
+    border-top: 1px solid #dfdede;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 7%);
+    display: none;
+}
+
+.hi_second_menu {
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: pink;
-    display: none;
+}
+
+.hi_second_menu .hi_nav_menu_a {
+    font-size: 0.16rem;
+    line-height: 60px;
 }
